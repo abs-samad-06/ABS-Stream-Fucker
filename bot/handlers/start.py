@@ -155,4 +155,4 @@ async def handle_file_access(client: Client, message: Message, token: str):
 
 def register(app: Client):
     """Register start handler"""
-    app.add_handler(filters.command("start") & filters.private, start_handler)
+    app.on_message(filters.command("start") & filters.private)(start_handler)
