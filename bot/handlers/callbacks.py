@@ -300,4 +300,4 @@ async def handle_confirm_delete(client: Client, callback: CallbackQuery):
 
 def register(app: Client):
     """Register callback handler"""
-    app.add_handler(filters.callback_query, callback_handler)
+    app.on_callback_query()(callback_handler)
