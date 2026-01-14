@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream - ABS-Stream-Fucker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .video-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: #000;
+        }
+        
+        video {
+            width: 100%;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        
+        .controls {
+            background: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 5px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .footer {
+            background: #0a0a0a;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #222;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .spinner {
+            border: 4px solid #333;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 20px;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔥 ABS-Stream-Fucker</h1>
+        <p>Streaming karo bhenchod! 💀</p>
+    </div>
+    
+    <div class="video-container">
+        <video id="videoPlayer" controls autoplay>
+            <source src="{{ video_url }}" type="video/mp4">
+            Your browser doesn't support video playback BC!
+        </video>
+    </div>
+    
+    <div class="controls">
+        <a href="{{ download_url }}" class="btn">📥 Download File</a>
+        <a href="https://t.me/ABSStreamFuckerBot" class="btn">🤖 Bot</a>
+    </div>
+    
+    <div class="footer">
+        <p>ABS-Stream-Fucker © 2024 | Made with 💀 and gaali</p>
+    </div>
+    
+    <script>
+        const video = document.getElementById('videoPlayer');
+        
+        video.addEventListener('loadstart', function() {
+            console.log('Video loading started BC!');
+        });
+        
+        video.addEventListener('canplay', function() {
+            console.log('Video ready to play MC!');
+        });
+        
+        video.addEventListener('error', function() {
+            console.error('Video playback failed!');
+            alert('❌ Video load nahi ho raha BC! Refresh kar ya download kar le.');
+        });
+    </script>
+</body>
+</html>
